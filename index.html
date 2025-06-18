@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>Arun's Portfolio.</title>
+  <meta name="title" content="Arun's Portfolio.">
+  <meta name="description" content="This is a personal portfolio html template made by arun">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="assets/images/letter-a.svg" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/myImage.jpg">
+  <!-- <link rel="preload" as="image" href="./assets/images/Blog.svg"> -->
+
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/myLogo.png" width="64" height="24" alt="Arun home">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="#" class="logo">
+            <img src="./assets/images/lightLogo.png" width="64" height="24" alt="Arun home">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#Homes" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <a href="#Abouts" class="navbar-link">About</a>
+          </li>
+
+          <li>
+            <a href="#Projects" class="navbar-link">Projects</a>
+          </li>
+
+          <li>
+            <a href="#Contacts" class="navbar-link">Contact</a>
+          </li>
+
+        </ul>
+
+        <div class="wrapper">
+          <a href="mailto:kumawatarun8989@email.com" class="contact-link">kumawatarun8989@email.com</a>
+
+          <a href="tel:9479837511" class="contact-link">(+91) 9479837511</a>
+        </div>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="assets/images/Arun's cv.pdf" class="social-link" download="Arun's cv.pdf">
+              <ion-icon name="document-text-outline"></ion-icon>
+            </a>
+          </li>
+
+
+          <li>
+            <a href="https://github.com/arunkumawatak" class="social-link" target="_blank">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.linkedin.com/in/arun-kumawat-28bb86267/" class="social-link" target="_blank">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+      <!-- home -->
+      <section class="section hero" aria-label="home" id="Homes">
+        <div class="container">
+
+          <figure class="hero-banner">
+            <img src="./assets/images/myImage.jpg" width="560" height="540" alt="Arun" class="w-100" data-reveal="top">
+
+            <img src="./assets/images/projectText.svg" width="203" height="91" alt="10+ Projects Done" class="shape"
+              data-reveal="top" data-reveal-delay="0.25s">
+          </figure>
+
+          <div class="hero-content">
+
+            <h1 class="h1 hero-title" data-reveal="top" data-reveal-delay="0.5s">
+              I'm a Flutter App Developer.
+            </h1>
+
+            <p class="section-text" data-reveal="top" data-reveal-delay="0.75s">
+              Hey! I'm Arun, a dedicated Flutter developer with over 2 years of experience building beautiful,
+              high-performance mobile apps. I've also explored tools like Figma and JavaScript to enhance my design
+              sense and frontend understanding. With solid freelancing experience, I turn ideas into smooth, real-world
+              solutions that users love.
+            </p>
+
+            <div class="btn-wrapper" data-reveal="top" data-reveal-delay="1s">
+              <a href="#Projects" class="btn btn-primary" id="contact">See My Works</a>
+
+              <a href="#Contacts" class="btn btn-secondary">Contact Me</a>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- about -->
+      <section class="section about" aria-label="about" id="Abouts">
+        <div class="container">
+          <div class="wrapper">
+            <div data-reveal="left">
+              <h2 class="h2 section-title">What I Do?</h2>
+              <p class="section-text">
+                I craft cross-platform mobile apps using Flutter — fast, clean, and built to scale. From e-commerce
+                stores to ERP systems, real estate platforms to food delivery, and even gaming & legal consultation apps
+                with video calls — I’ve built solutions that power real businesses. Integrated with payment gateways,
+                Google APIs, Firebase, and more — I bring ideas to life with code that works and designs that feel
+                right.
+              </p>
+            </div>
+
+            <ul class="progress-list" data-reveal="right">
+
+              <li class="progress-item">
+                <div class="label-wrapper">
+                  <p>Flutter (Core Expertise)</p>
+                  <span class="span">90%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-fill" style="width: 90%; background-color: #c7b1dd"></div>
+                </div>
+              </li>
+
+              <li class="progress-item">
+                <div class="label-wrapper">
+                  <p>HTML/CSS (Basic Layout & Styling)</p>
+                  <span class="span">50%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-fill" style="width: 50%; background-color: #8caeec"></div>
+                </div>
+              </li>
+
+              <li class="progress-item">
+                <div class="label-wrapper">
+                  <p>Figma (Basic Design Understanding)</p>
+                  <span class="span">45%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-fill" style="width: 45%; background-color: #b0d4c1"></div>
+                </div>
+              </li>
+
+              <li class="progress-item">
+                <div class="label-wrapper">
+                  <p>Java Script (Explored)</p>
+                  <span class="span">35%</span>
+                </div>
+                <div class="progress">
+                  <div class="progress-fill" style="width: 35%; background-color: #e3a6b6"></div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+          <ul class="grid-list">
+            <li data-reveal="bottom">
+              <div class="about-card">
+                <div class="card-icon">
+                  <img src="./assets/images/icon-2.svg" width="52" height="52" loading="lazy" alt="App Dev Icon">
+                </div>
+                <h3 class="h4 card-title">Flutter App Development</h3>
+                <p class="card-text">
+                  My core expertise — building scalable, feature-rich mobile apps using Flutter. From concept to
+                  deployment, I deliver smooth performance and stunning UI.
+                </p>
+              </div>
+            </li>
+
+            <li data-reveal="bottom" data-reveal-delay="0.25s">
+              <div class="about-card">
+                <div class="card-icon">
+                  <img src="./assets/images/icon-1.svg" width="52" height="52" loading="lazy" alt="Figma Icon">
+                </div>
+                <h3 class="h4 card-title">UI/UX & Figma</h3>
+                <p class="card-text">
+                  While not a designer by profession, I work with Figma to translate design ideas into real UI — helping
+                  streamline frontend development.
+                </p>
+              </div>
+            </li>
+
+            <li data-reveal="bottom" data-reveal-delay="0.5s">
+              <div class="about-card">
+                <div class="card-icon">
+                  <img src="./assets/images/icon-3.svg" width="52" height="52" loading="lazy" alt="Web Tech Icon">
+                </div>
+                <h3 class="h4 card-title">Frontend Basics</h3>
+                <p class="card-text">
+                  I understand the basics of HTML/CSS — enough to grasp responsive layouts, tweak templates, and work
+                  collaboratively with web teams when needed.
+                </p>
+              </div>
+            </li>
+
+            <li data-reveal="bottom" data-reveal-delay="0.75s">
+              <div class="about-card">
+                <div class="card-icon">
+                  <img src="./assets/images/icon-4.svg" width="52" height="52" loading="lazy" alt="React Native Icon">
+                </div>
+                <h3 class="h4 card-title">Java Script (Exploration)</h3>
+                <p class="card-text">
+                  I've explored JavaScript to build a strong foundation in web development alongside my expertise in
+                  Flutter.
+
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- PROJECT -->
+      <section class="section project" aria-labelledby="project-label" id="Projects">
+        <div class="container">
+
+          <div class="title-wrapper" data-reveal="top">
+
+            <div>
+              <h2 class="h2 section-title" id="project-label">Latest Projects</h2>
+
+              <!-- <p class="section-text">
+                Check out some of my latest projects with creative ideas.
+              </p> -->
+            </div>
+
+            <!-- <a href="#" class="btn btn-secondary">See All Projects</a> -->
+
+          </div>
+          <!-- nway hrms -->
+          <ul class="grid-list">
+            <li>
+              <div class="project-card project-card-1"
+                style="background-color: #f8f5fb; display: flex; align-items: center; gap: 20px;">
+
+                <div class="card-content" data-reveal="left" style="flex: 1;">
+                  <p class="card-tag" style="color: #a07cc5">Mobile Application</p>
+                  <h3 class="h3 card-title">NWAY HRMS</h3>
+                  <p class="card-text">
+                    NWAY HRMS is a smart attendance and workforce management app with real-time punch-in/out via selfie
+                    and GPS — restricted to a 200m geofence radius around company sites. It supports a dynamic approval
+                    workflow for leaves, resignations, reimbursements, OTs, and more — structured by hierarchy (TL, HR,
+                    Manager, Director). Empowering organizations with streamlined control and transparency.
+                  </p>
+                  <a href="#" class="btn-text see-project-btn" style="color: #a07cc5">
+                    <span class="span">See Project</span>
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </a>
+
+                  <div class="project-links">
+                    <a href="https://play.google.com/store/apps/details?id=com.nway.hrm.ios&pcampaignid=web_share"
+                      target="_blank" class="circle-icon purple-bg">
+
+                      <ion-icon name="logo-google-playstore"></ion-icon> </a>
+                    <a href="https://apps.apple.com/in/app/nway-hrms/id6742221199" target="_blank"
+                      class="circle-icon purple-bg">
+                      <ion-icon name="logo-apple-appstore"></ion-icon>
+                    </a>
+                  </div>
+                  <!-- <a href="#" class="btn-text" style="color: #a07cc5">
+                    <span class="span">See Project</span>
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </a> -->
+                </div>
+
+                <figure class="card-banner" data-reveal="right" style="flex: 0 0 auto;">
+                  <img src="./assets/images/NwayHRMS.png" width="650" height="370" loading="lazy" alt="Web Design"
+                    class="w-100">
+                </figure>
+
+              </div>
+            </li>
+
+            <!-- green chopper -->
+            <li>
+              <div class="project-card project-card-2" style="background-color: #f1f5fd">
+
+                <div class="card-content" data-reveal="right">
+
+                  <p class=" card-tag" style="color: #3f78e0">Mobile Application</p>
+
+                  <h3 class="h3 card-title">Green Chopper</h3>
+                  <h5 class="h5 card-title">Cut Vegetables E-commerce App</h5>
+
+                  <p class="card-text">
+                    Green Chopper is a cross-platform vegetable e-commerce application that allows users to purchase
+                    freshly cut vegetables online. The app focuses on providing fresh, hand-picked vegetables directly
+                    to customers' doors without using pre-stored inventory.</p>
+
+                  <a href="#" class="btn-text see-project-btn" style="color: #3f78e0">
+                    <span class="span">See Project</span>
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </a>
+
+                  <div class="project-links">
+                    <a href="https://play.google.com/store/apps/details?id=com.greenchopper.android&pcampaignid=web_share"
+                      target="_blank" class="circle-icon blue-bg">
+
+                      <ion-icon name="logo-google-playstore"></ion-icon> </a>
+                    <a href="https://apps.apple.com/in/app/greenchopper/id6474066136" target="_blank"
+                      class="circle-icon blue-bg">
+                      <ion-icon name="logo-apple-appstore"></ion-icon>
+                    </a>
+                  </div> <!-- <a href="#" class="btn-text" style="color: #3f78e0">
+                    <span class="span">See Project</span>
+
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </a> -->
+
+                </div>
+
+                <figure class="card-banner" data-reveal="left">
+                  <img src="./assets/images/greenchopper.png" width="600" height="367" loading="lazy" alt="Web Design"
+                    class="w-100">
+                </figure>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card project-card-3" style="background-color: #f5faf7">
+
+                <div class="card-content" data-reveal="left">
+
+                  <p class=" card-tag" style="color: #7cb798">Mobile Application</p>
+
+                  <h3 class="h3 card-title">Gamers Gift</h3>
+
+                  <p class="card-text">
+                    GamersGift is a digital storefront that enables users to purchase gaming gift cards like Google
+                    Play, iTunes, PUBG UC, Free Fire Diamonds, and more. It offers a seamless, secure, and engaging
+                    experience for gamers to recharge their accounts quickly.
+                  </p>
+
+                  <!-- 👇👇 ADD this block here 👇👇 -->
+                  <a href="#" class="btn-text see-project-btn" style="color: #7cb798">
+                    <span class="span">See Project</span>
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </a>
+
+                  <div class="project-links">
+                    <a href="https://play.google.com/store/apps/details?id=com.encanto.gamersgift&pcampaignid=web_share"
+                      target="_blank" class="circle-icon green-bg">
+
+                      <ion-icon name="logo-google-playstore"></ion-icon> </a>
+                    <!-- <a href="YOUR_APPSTORE_LINK" target="_blank" class="circle-icon green-bg">
+                      <ion-icon name="logo-apple-appstore"></ion-icon>
+                    </a> -->
+                  </div>
+
+
+                </div>
+
+                <figure class="card-banner" data-reveal="right">
+                  <img src="./assets/images/gamersGIft.png" width="600" height="367" loading="lazy" alt="Web Design"
+                    class="w-100">
+                </figure>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card project-card-4" style="background-color: #fcf4f6">
+
+                <div class="card-content" data-reveal="left">
+
+                  <p class=" card-tag" style="color: #d16b86">Mobile Application</p>
+
+                  <h3 class="h3 card-title">ConsultKiya</h3>
+
+                  <p class="card-text">
+                    ConsultKiya is a dual mobile application platform (ConsultKiya - User & ConsultKiya - Lawyer) that
+                    connects users with verified lawyers for instant consultations. Users can schedule, call, and pay
+                    for expert legal advice in real time.
+                  </p>
+                  <a href="#" class="btn-text see-project-btn" style="color: #d16b86">
+                    <span class="span">See Project</span>
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </a>
+
+                  <div class="project-links">
+                    <a href="https://play.google.com/store/search?q=consultkiya&c=apps" target="_blank"
+                      class="circle-icon pink-bg">
+
+                      <ion-icon name="logo-google-playstore"></ion-icon> </a>
+                    <!-- <a href="YOUR_APPSTORE_LINK" target="_blank" class="circle-icon pink-bg">
+                      <ion-icon name="logo-apple-appstore"></ion-icon>
+                    </a> -->
+                  </div>
+                </div>
+                <figure class="card-banner" data-reveal="right">
+                  <img src="./assets/images/consultkiya.png" width="620" height="370" loading="lazy" alt="Web Design"
+                    class="w-100">
+                </figure>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+      <!--CONTACT -->
+      <section class="section contact" aria-label="contact" id="Contacts">
+        <div class="container">
+
+          <div class="contact-card">
+
+            <div class="contact-content" data-reveal="left">
+
+              <div class="card-icon">
+                <img src="./assets/images/icon-5.svg" width="44" height="44" loading="lazy" alt="envelop icon">
+              </div>
+
+              <h2 class="h2 section-title">Got an idea? Let’s make it real.</h2>
+
+              <p class="section-text">
+                Whether you’re looking for a Flutter app developer, or a UI/UX designer—I’m here to help bring your
+                ideas to life. Fill out the form, and I’ll get back to you soon.
+              </p>
+
+            </div>
+
+            <form class="contact-form" data-reveal="right">
+
+              <div class="input-wrapper">
+                <input type="text" name="name" placeholder="Name *" required class="input-field">
+                <input type="email" name="email_address" placeholder="Email *" required class="input-field">
+              </div>
+
+              <textarea name="message" placeholder="Message *" required class="input-field"></textarea>
+
+              <button type="submit" class="btn btn-secondary">Send message</button>
+
+            </form>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ✅ EmailJS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function () {
+    emailjs.init("3WjbZapNU2Ps9GBV2"); // ✅ Your EmailJS PUBLIC KEY
+  })();
+
+  const form = document.querySelector('.contact-form');
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  async function getUserDetails() {
+    try {
+      const response = await fetch('https://ipapi.co/json/');
+      return await response.json();
+    } catch (error) {
+      console.error('IP details fetch failed:', error);
+      return {};
+    }
+  }
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const name = form.elements['name'].value.trim();
+    const email = form.elements['email_address'].value.trim();
+    const message = form.elements['message'].value.trim();
+
+    if (!name || !email || !message) {
+      alert('❗ Please fill in all fields.');
+      return;
+    }
+
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
+      alert('❗ Please enter a valid email address.');
+      return;
+    }
+
+    // Show loading indicator on button
+    submitBtn.disabled = true;
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = `<span class="loader"></span> Sending...`;
+
+    const dateTime = new Date().toLocaleString();
+    const deviceInfo = navigator.userAgent;
+    const pageUrl = window.location.href;
+    const ipDetails = await getUserDetails();
+
+    const params = {
+      from_name: name,
+      reply_to: email,
+      message: message,
+      date_time: dateTime,
+      device_info: deviceInfo,
+      page_url: pageUrl,
+      ip: ipDetails.ip || 'N/A',
+      city: ipDetails.city || 'N/A',
+      region: ipDetails.region || 'N/A',
+      country: ipDetails.country_name || 'N/A',
+      org: ipDetails.org || 'N/A',
+    };
+
+emailjs.send('service_5d9xbkq', 'template_levr1uh', params)
+  .then(() => {
+    alert('✅ Message sent successfully!');
+    form.reset();
+  })
+  .catch((error) => {
+    console.error('❌ EmailJS Error:', error);
+    alert('❌ Failed to send message. Please try again later.');
+  })
+  .finally(() => {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = originalText;
+  });
+  });
+</script>
+
+
+
+    </article>
+  </main>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="copyright">
+        © 2025 Arun kumawat. All rights reserved. </p>
+      <ul class="social-list">
+        <li>
+          <a href="assets/images/Arun's cv.pdf" class="social-link" download="Arun's cv.pdf">
+            <ion-icon name="document-text-outline"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/arunkumawatak" class="social-link" target="_blank">
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.linkedin.com/in/arun-kumawat-28bb86267/" class="social-link" target="_blank">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <!-- js links -->
+  <script src="./assets/js/script.js"></script>
+  <!--  ionicon link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
