@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>All Projects - Arun's Portfolio.</title>
+  <meta name="title" content="Arun's Portfolio.">
+  <meta name="description" content="This is a personal portfolio html template made by arun">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="assets/images/letter-a.svg" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/NwayHRMS.png">
+  <link rel="preload" as="image" href="./assets/images/greenchopper.png">
+  <link rel="preload" as="image" href="./assets/images/gamersGIft.png">
+  <link rel="preload" as="image" href="./assets/images/consultkiya.png">
+
+  <!-- Custom Styles for Project Cards -->
+  <style>
+    .project-card .content {
+      padding: 24px;
+    }
+
+    .project-card .card-title {
+      margin-block: 0;
+    }
+
+    .project-card .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-block: 12px;
+    }
+
+    .project-card .tag {
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      color: var(--white);
+    }
+
+    .project-card .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .project-card .btn-link {
+      color: var(--white);
+      font-size: var(--fs-7);
+      font-weight: var(--fw-700);
+      padding: 10px 24px;
+      border-radius: var(--radius-pill);
+      transition: var(--transition-1);
+    }
+
+    .project-card .btn-link:is(:hover, :focus-visible) {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Card-specific colors */
+    .project-card.style-1 { background-color: #f8f5fb; }
+    .project-card.style-1 .card-title, .project-card.style-1 .card-text { color: var(--charcoal); }
+    .project-card.style-1 .tag { background-color: #a07cc5; }
+    .project-card.style-1 .btn-link { background-color: #a07cc5; }
+    .project-card.style-1 .btn-link.secondary { background: none; border: 2px solid #a07cc5; color: #a07cc5; }
+
+    .project-card.style-2 { background-color: #f1f5fd; }
+    .project-card.style-2 .card-title, .project-card.style-2 .card-text { color: var(--charcoal); }
+    .project-card.style-2 .tag { background-color: #3f78e0; }
+    .project-card.style-2 .btn-link { background-color: #3f78e0; }
+    .project-card.style-2 .btn-link.secondary { background: none; border: 2px solid #3f78e0; color: #3f78e0; }
+
+    .project-card.style-3 { background-color: #f5faf7; }
+    .project-card.style-3 .card-title, .project-card.style-3 .card-text { color: var(--charcoal); }
+    .project-card.style-3 .tag { background-color: #7cb798; }
+    .project-card.style-3 .btn-link { background-color: #7cb798; }
+    .project-card.style-3 .btn-link.secondary { background: none; border: 2px solid #7cb798; color: #7cb798; }
+    
+    .project-card.style-4 { background-color: #fcf4f6; }
+    .project-card.style-4 .card-title, .project-card.style-4 .card-text { color: var(--charcoal); }
+    .project-card.style-4 .tag { background-color: #d16b86; }
+    .project-card.style-4 .btn-link { background-color: #d16b86; }
+    .project-card.style-4 .btn-link.secondary { background: none; border: 2px solid #d16b86; color: #d16b86; }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+  <header class="header" data-header>
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="./assets/images/myLogo.png" width="64" height="24" alt="Arun home">
+      </a>
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="index.html" class="logo">
+            <img src="./assets/images/lightLogo.png" width="64" height="24" alt="Arun home">
+          </a>
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+        <ul class="navbar-list">
+          <li><a href="index.html#Homes" class="navbar-link">Home</a></li>
+          <li><a href="index.html#Abouts" class="navbar-link">About</a></li>
+          <li><a href="index.html#Projects" class="navbar-link">Projects</a></li>
+          <li><a href="index.html#Contacts" class="navbar-link">Contact</a></li>
+        </ul>
+        <div class="wrapper">
+          <a href="mailto:kumawatarun8989@email.com" class="contact-link">kumawatarun8989@email.com</a>
+          <a href="tel:9479837511" class="contact-link">(+91) 9479837511</a>
+        </div>
+        <ul class="social-list">
+          <li><a href="assets/images/Arun's cv.pdf" class="social-link" download="Arun's cv.pdf"><ion-icon name="document-text-outline"></ion-icon></a></li>
+          <li><a href="https://github.com/arunkumawatak" class="social-link" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
+          <li><a href="https://www.linkedin.com/in/arun-kumawat-28bb86267/" class="social-link" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+      </nav>
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+      <div class="overlay" data-nav-toggler data-overlay></div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <!-- 
+        - #PROJECT
+      -->
+      <section class="section project" aria-labelledby="project-label" style="padding-top: 150px;">
+        <div class="container">
+
+          <div class="title-wrapper" data-reveal="top">
+            <div>
+              <h2 class="h2 section-title" id="project-label">All Projects</h2>
+              <p class="section-text">
+                Here is a collection of my work, showcasing a variety of mobile applications I've built.
+              </p>
+            </div>
+            <a href="index.html" class="btn btn-secondary">Back to Home</a>
+          </div>
+
+          <ul class="grid-list">
+            
+            <!-- NWAY HRMS -->
+            <li data-reveal="bottom">
+              <div class="project-card style-1">
+                <figure class="card-banner">
+                  <img src="./assets/images/NwayHRMS.png" width="650" height="370" loading="lazy" alt="NWAY HRMS App" class="w-100">
+                </figure>
+                <div class="content">
+                  <h3 class="h3 card-title">NWAY HRMS</h3>
+                  <p class="card-text">A smart attendance and workforce management app with real-time punch-in/out via selfie and GPS, restricted to a 200m geofence radius.</p>
+                  <div class="tags">
+                    <span class="tag">Flutter</span>
+                    <span class="tag">Firebase</span>
+                    <span class="tag">GPS</span>
+                  </div>
+                  <div class="buttons">
+                    <a href="https://play.google.com/store/apps/details?id=com.nway.hrm.ios&pcampaignid=web_share" target="_blank" class="btn-link">Play Store</a>
+                    <a href="https://apps.apple.com/in/app/nway-hrms/id6742221199" target="_blank" class="btn-link">App Store</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Green Chopper -->
+            <li data-reveal="bottom" data-reveal-delay="0.25s">
+              <div class="project-card style-2">
+                <figure class="card-banner">
+                  <img src="./assets/images/greenchopper.png" width="600" height="367" loading="lazy" alt="Green Chopper App" class="w-100">
+                </figure>
+                <div class="content">
+                  <h3 class="h3 card-title">Green Chopper</h3>
+                  <p class="card-text">A cross-platform vegetable e-commerce app for purchasing freshly cut vegetables without pre-stored inventory.</p>
+                  <div class="tags">
+                    <span class="tag">Flutter</span>
+                    <span class="tag">E-Commerce</span>
+                    <span class="tag">Payments</span>
+                  </div>
+                  <div class="buttons">
+                    <a href="https://play.google.com/store/apps/details?id=com.greenchopper.android&pcampaignid=web_share" target="_blank" class="btn-link">Play Store</a>
+                    <a href="https://apps.apple.com/in/app/greenchopper/id6474066136" target="_blank" class="btn-link">App Store</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            kiikk
+
+            <!-- Gamers Gift -->
+            <li data-reveal="bottom" data-reveal-delay="0.5s">
+              <div class="project-card style-3">
+                <figure class="card-banner">
+                  <img src="./assets/images/gamersGIft.png" width="600" height="367" loading="lazy" alt="Gamers Gift App" class="w-100">
+                </figure>
+                <div class="content">
+                  <h3 class="h3 card-title">Gamers Gift</h3>
+                  <p class="card-text">A digital storefront for purchasing gaming gift cards like Google Play, iTunes, PUBG UC, and Free Fire Diamonds.</p>
+                  <div class="tags">
+                    <span class="tag">Flutter</span>
+                    <span class="tag">Gaming</span>
+                    <span class="tag">Payments</span>
+                  </div>
+                  <div class="buttons">
+                    <a href="https://play.google.com/store/apps/details?id=com.encanto.gamersgift&pcampaignid=web_share" target="_blank" class="btn-link">Play Store</a>
+                     <a href="https://github.com/arunkumawatak" target="_blank" class="btn-link secondary">GitHub</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- ConsultKiya -->
+            <li data-reveal="bottom" data-reveal-delay="0.75s">
+              <div class="project-card style-4">
+                <figure class="card-banner">
+                  <img src="./assets/images/consultkiya.png" width="620" height="370" loading="lazy" alt="ConsultKiya App" class="w-100">
+                </figure>
+                <div class="content">
+                  <h3 class="h3 card-title">ConsultKiya</h3>
+                  <p class="card-text">A dual app platform connecting users with verified lawyers for instant legal consultations via scheduling and video calls.</p>
+                  <div class="tags">
+                    <span class="tag">Flutter</span>
+                    <span class="tag">Video Call</span>
+                    <span class="tag">Consultation</span>
+                  </div>
+                  <div class="buttons">
+                    <a href="https://play.google.com/store/search?q=consultkiya&c=apps" target="_blank" class="btn-link">Play Store</a>
+                    <a href="https://github.com/arunkumawatak" target="_blank" class="btn-link secondary">GitHub</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- 
+    - #FOOTER
+  -->
+  <footer class="footer">
+    <div class="container">
+      <p class="copyright">
+        © 2025 Arun kumawat. All rights reserved.
+      </p>
+      <ul class="social-list">
+        <li><a href="assets/images/arun's cv.pdf" class="social-link" download="Arun's cv.pdf"><ion-icon name="document-text-outline"></ion-icon></a></li>
+        <li><a href="https://github.com/arunkumawatak" class="social-link" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
+        <li><a href="https://www.linkedin.com/in/arun-kumawat-28bb86267/" class="social-link" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
