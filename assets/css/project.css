@@ -1,0 +1,221 @@
+/* ------------------------- */
+/* --- FONT & BASIC SETUP -- */
+/* ------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@600&display=swap');
+
+:root {
+    /* Define a palette of reusable colors */
+    --color-text: #333;
+    --color-rose-bg: #D3B6B1;
+    --color-serum-bg: #C9C9B9;
+    --color-sky-bg: #B4C7D6;
+    --color-mint-bg: #B9C7B4;
+    --color-sand-bg: #D6C7B4;
+    --color-lilac-bg: #C9B4D6;
+    --color-logo-bg: #F5F5F5;
+    --color-logo-bg-gg: #545f61;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Lato', sans-serif;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: #F8F5F2;
+    color: var(--color-text);
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* ------------------------- */
+/* --- BACK TO HOME LINK --- */
+/* ------------------------- */
+.back-link-container {
+    max-width: 1300px; /* Match the grid width for alignment */
+    width: 100%;
+    margin: 0 auto 2.5rem auto; /* Center it and add space below */
+    padding-inline: 0; /* Align with grid content */
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 50px; /* Pill shape */
+    color: var(--color-text);
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.back-link ion-icon {
+    font-size: 1.3rem;
+}
+
+.back-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border-color: #d0d0d0;
+}
+
+/* ------------------------- */
+/* --- CARD CONTAINER ------ */
+/* ------------------------- */
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ------------------------- */
+/* --- PROJECT CARD -------- */
+/* ------------------------- */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: calc(33.333% - 2rem);
+    max-width: 380px;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Color Modifiers and Accent Color Variables --- */
+.project-card--mint { background-color: var(--color-mint-bg); --card-accent-color: #64a25a; }
+.project-card--serum { background-color: var(--color-serum-bg); --card-accent-color: #a0a086; }
+.project-card--sky { background-color: var(--color-sky-bg); --card-accent-color: #6a95b8; }
+.project-card--rose { background-color: var(--color-rose-bg); --card-accent-color: #b87a70; }
+.project-card--sand { background-color: var(--color-sand-bg); --card-accent-color: #b89f70; }
+.project-card--lilac { background-color: var(--color-lilac-bg); --card-accent-color: #a070b8; }
+
+/* --- Top Logo Container --- */
+.project-card__image-container,
+.project-card__image-container1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 220px;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+.project-card__image-container { background-color: var(--color-logo-bg); }
+.project-card__image-container1 { background-color: var(--color-logo-bg-gg); }
+
+.project-card__image {
+    max-width: 80%;
+    max-height: 80%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* --- Card Content --- */
+.project-card__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 2rem;
+    padding-top: 1.5rem;
+}
+
+.project-card__title {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0 0 0.75rem 0;
+}
+
+.project-card__description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+    flex-grow: 1; /* Pushes the button/links to the bottom */
+}
+
+/* --- INTERACTIVE LINK STYLES --- */
+.project-card__link-area {
+    margin-top: 1.5rem; /* Space above the button/links */
+    min-height: 44px; /* Prevents layout shift */
+    display: flex;
+    align-items: center;
+}
+
+.see-project-btn {
+    display: inline-flex; /* Use inline-flex for proper alignment */
+    cursor: pointer;
+}
+
+.see-project-btn.hidden { display: none; }
+
+.see-project-btn__icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.see-project-btn:hover .see-project-btn__icon-wrapper {
+    background-color: rgba(0,0,0,0.05);
+}
+
+.see-project-btn__icon-wrapper svg { width: 18px; height: 18px; stroke: var(--color-text); }
+
+.project-card__store-links {
+    display: none;
+    gap: 15px;
+}
+
+.project-card__store-links.show {
+    display: flex;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.store-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 22px;
+    background-color: var(--card-accent-color); /* The magic! Gets color from the card */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.store-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* ------------------------- */
+/* --- RESPONSIVENESS ------ */
+/* ------------------------- */
+@media (max-width: 1200px) { .project-card { flex-basis: calc(50% - 1rem); } }
+@media (max-width: 768px) { body { padding: 1rem; } .card-grid { gap: 1rem; } .project-card { flex-basis: 100%; max-width: 100%; } }
