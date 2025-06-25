@@ -1,6 +1,6 @@
 # Arun's Personal Portfolio Website
+![Alt text](assets/prScreenShot/prSs.png)
 
-(./assets/prScreenShot/prSs.png)
 
 A clean, modern, and fully responsive personal portfolio website designed to showcase my skills and projects as a Flutter App Developer. The design is inspired by elegant, minimalist principles and is built from the ground up with pure HTML, CSS, and a touch of vanilla JavaScript.
 
