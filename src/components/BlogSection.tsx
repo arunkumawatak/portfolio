@@ -7,7 +7,7 @@ import { getLatestPosts } from "@/data/blogs";
 const BlogSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const latest = getLatestPosts(3) ;
+  const latest = getLatestPosts(3);
 
   return (
     <section ref={ref} className="py-24 border-t border-border" id="blog">
