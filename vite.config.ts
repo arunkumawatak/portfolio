@@ -5,7 +5,7 @@ import path from "path";
 export default defineConfig(({ mode }) => ({
   // Smart base: Use '/' in development → no 404s locally
   // Use '/portfolio/' only when building for production
-  base: mode === "development" ? "/" : "/portfolio/",
+ base: mode === "development" ? "/" : "/portfolio/",
 
   server: {
     host: "::",
