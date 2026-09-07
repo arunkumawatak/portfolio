@@ -7,6 +7,7 @@ const navLinks = [
   { label: "About", href: "/#about" },
   { label: "Projects", href: "/#projects" },
   { label: "Blog", href: "/#blog" },
+  { label: "Certifications", href: "/certifications" },   
   { label: "Contact", href: "/#contact" },
 ];
 
@@ -70,9 +71,8 @@ const Navbar = () => {
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-        scrolled ? "bg-background/80 backdrop-blur-lg border-b border-border" : ""
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${scrolled ? "bg-background/80 backdrop-blur-lg border-b border-border" : ""
+        }`}
     >
       <div className="container flex items-center justify-between h-16">
         <Link to="/" className="font-heading text-xl text-foreground">

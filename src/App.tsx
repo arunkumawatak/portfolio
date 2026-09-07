@@ -12,6 +12,7 @@ import BlogDetailPage from "./pages/BlogDetailPage.tsx";
 import CompanyDetailPage from "./pages/CompanyDetailPage.tsx";
 import ExperiencePage from "./pages/ExperiencePage.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import CertificationsPage from "./components/CertificationsPage.tsx";
 
 const queryClient = new QueryClient();
 
@@ -30,7 +31,9 @@ const App = () => (
           <Route path="/blog/:id" element={<BlogDetailPage />} />
           <Route path="/company/:id" element={<CompanyDetailPage />} />
           <Route path="/experience" element={<ExperiencePage />} />
+          <Route path="/certifications" element={<CertificationsPage />} />
           <Route path="*" element={<NotFound />} />
+
         </Routes>
       </HashRouter>
     </TooltipProvider>

@@ -12,7 +12,7 @@ A premium, dark-themed developer portfolio built with React, TypeScript, Tailwin
  
 ## 🔗 Live Preview
 
-> **[arunkumawatak.github.io/react_portfolio](https://arunkumawatak.github.io/react_portfolio/)**
+> **[arunkumawatak.github.io/portfolio](https://arunkumawatak.github.io/portfolio/)**
 
 ---
 
@@ -103,7 +103,7 @@ src/
 
 ```bash
 # Clone the repository
-git clone https://github.com/arunkumawatak/react_portfolio/
+git clone https://github.com/arunkumawatak/portfolio/
 cd portfolio
 
 # Install dependencies
