@@ -72,6 +72,7 @@ const ExperiencePage = () => {
                     </div>
                   </motion.div>
 
+                  {/* Connecting line to card */}
                   <div
                     className={`absolute top-1/2 hidden md:block h-px w-[calc(50%-2rem)] bg-gradient-to-r ${
                       isLeft
