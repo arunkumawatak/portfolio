@@ -1,4 +1,4 @@
-const asset = (file: string) => `${import.meta.env.BASE_URL}certificates/${file}`;
+const asset = (file: string) => `${import.meta.env.BASE_URL}${file}`;
 export const formatIssueDate = (iso: string) =>
   new Date(iso).toLocaleDateString("en-US", { month: "short", year: "numeric" });
 export interface Certification {
@@ -32,7 +32,6 @@ export const certifications: Certification[] = [
     category: "Internship",
     tags: ["Internship", "Letter", "Flutter"],
     thumbnail: asset("images/InternshipLetter.png"),
-    // certificateImage: asset("images/InternshipLetter.png"),
     credentialId: "PDF-2025-0002",
     featured: true,
   },
@@ -48,7 +47,6 @@ export const certifications: Certification[] = [
     category: "PDF",
     tags: ["PDF", "Jira", "Workflow"],
     thumbnail: asset("images/JiraManaging.png"),
-    // certificateImage: asset("images/JiraManaging.png"),
     credentialId: "PDF-2025-0001",
   },
   {
@@ -62,7 +60,6 @@ export const certifications: Certification[] = [
     category: "PDF",
     tags: ["PDF", "Programming"],
     thumbnail: asset("images/Programming Foundations Fundamentals.png"),
-    // certificateImage: asset("images/Programming Foundations Fundamentals.png"),
     credentialId: "LIL-PFF-2026-0516",
   },
   {
@@ -76,7 +73,6 @@ export const certifications: Certification[] = [
     category: "PDF",
     tags: ["PDF", "Java", "Security"],
     thumbnail: asset("images/Secure Coding in Java.png"),
-    // certificateImage: asset("pdf/Secure Coding in Java.pdf"),
     credentialId: "LIL-SC-JAVA-2026-0807",
   },
   {
@@ -90,7 +86,6 @@ export const certifications: Certification[] = [
     category: "PDF",
     tags: ["PDF", "SQL", "Database"],
     thumbnail: asset("images/SQL Practice.png"),
-    // certificateImage: asset("pdf/SQL Practice.pdf"),
     credentialId: "LIL-SQL-2026-0831",
   },
   {
@@ -104,7 +99,6 @@ export const certifications: Certification[] = [
     category: "PDF",
     tags: ["PDF", "NET", "Backend"],
     thumbnail: asset("images/Web Development with .NET.png"),
-    // certificateImage: asset("pdf/Web Development with .NET.pdf"),
     credentialId: "LIL-NET-2026-0723",
   },
   {
@@ -209,7 +203,6 @@ export const certifications: Certification[] = [
     category: "PDF",
     tags: ["PDF", "Java", "OOP"],
     thumbnail: asset("images/Java OOP.png"),
-    // certificateImage: asset("pdf/Java OOP.pdf"),
     credentialId: "LIL-JAVA-OOP-2026-0725",
   },
   {
