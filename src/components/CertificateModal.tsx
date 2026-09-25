@@ -1,8 +1,9 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
-import { Award, Download, ExternalLink, ShieldCheck, X } from "lucide-react";
+import { Award, ExternalLink, ShieldCheck, X } from "lucide-react";
 import { formatIssueDate, type Certification } from "@/data/certifications";
+
 
 interface CertificateModalProps {
   certification: Certification | null;
@@ -17,18 +18,13 @@ const CertificateModal = ({ certification, onClose }: CertificateModalProps) => 
     if (!certification) return;
 
     previouslyFocused.current = document.activeElement as HTMLElement;
-    const { overflow } = document.body.style;
     document.body.style.overflow = "hidden";
 
     const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        onClose();
-        return;
-      }
+      if (e.key === "Escape") onClose();
       if (e.key !== "Tab" || !panelRef.current) return;
-
       const focusables = panelRef.current.querySelectorAll<HTMLElement>(
-        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
       );
       if (focusables.length === 0) return;
       const first = focusables[0];
@@ -45,20 +41,18 @@ const CertificateModal = ({ certification, onClose }: CertificateModalProps) => 
 
     document.addEventListener("keydown", onKeyDown);
     const focusTimer = window.setTimeout(() => {
-      panelRef.current
-        ?.querySelector<HTMLElement>("button, a[href]")
-        ?.focus();
+      panelRef.current?.querySelector<HTMLElement>("button, a[href]")?.focus();
     }, 60);
 
     return () => {
       document.removeEventListener("keydown", onKeyDown);
       window.clearTimeout(focusTimer);
-      document.body.style.overflow = overflow;
+      document.body.style.overflow = "";
       previouslyFocused.current?.focus();
     };
   }, [certification, onClose]);
 
-  if (typeof document === "undefined") return null;
+  if (typeof document === "undefined" || !certification) return null;
 
   return createPortal(
     <AnimatePresence>
@@ -81,7 +75,7 @@ const CertificateModal = ({ certification, onClose }: CertificateModalProps) => 
             exit={{ opacity: 0, y: 16, scale: 0.98 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-3xl card-gradient border border-border rounded-xl overflow-hidden my-auto"
+            className="relative w-full max-w-5xl card-gradient border border-border rounded-2xl overflow-hidden my-auto"
           >
             <button
               type="button"
@@ -92,21 +86,15 @@ const CertificateModal = ({ certification, onClose }: CertificateModalProps) => 
               <X className="w-4 h-4" />
             </button>
 
-            <div className="relative aspect-[16/10] overflow-hidden bg-secondary">
-              {certification.certificateImage ? (
-                <img
-                  src={certification.certificateImage}
-                  alt={`${certification.title} certificate issued by ${certification.issuer}`}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  decoding="async"
-                />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center">
-                  <Award className="w-10 h-10 text-muted-foreground" aria-hidden="true" />
-                </div>
-              )}
-              <div className="absolute inset-0 bg-gradient-to-t from-card via-card/10 to-transparent" />
+            <div className="relative aspect-[16/10] md:aspect-[21/9] overflow-hidden bg-secondary">
+              <img
+                src={certification.thumbnail}
+                alt={`${certification.title} certificate`}
+                className="w-full h-full object-contain"
+                loading="lazy"
+                crossOrigin="anonymous"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
             </div>
 
             <div className="p-6 md:p-8">
@@ -147,25 +135,15 @@ const CertificateModal = ({ certification, onClose }: CertificateModalProps) => 
               )}
 
               <div className="flex flex-wrap items-center gap-3 mt-8">
-                {certification.certificateImage && (
+                {certification.thumbnail && (
                   <a
-                    href={certification.certificateUrl ?? certification.certificateImage}
+                    href={certification.thumbnail}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-body text-sm font-medium px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity"
                   >
                     View Certificate
                     <ExternalLink className="w-4 h-4" />
-                  </a>
-                )}
-                {certification.certificateImage && (
-                  <a
-                    href={certification.certificateImage}
-                    download
-                    className="inline-flex items-center gap-2 border border-border text-foreground font-body text-sm px-5 py-2.5 rounded-lg hover:border-primary/30 hover:text-primary transition-colors"
-                  >
-                    <Download className="w-4 h-4" />
-                    Download
                   </a>
                 )}
                 {certification.verificationUrl && (
@@ -185,7 +163,7 @@ const CertificateModal = ({ certification, onClose }: CertificateModalProps) => 
         </motion.div>
       )}
     </AnimatePresence>,
-    document.body,
+    document.body
   );
 };
 

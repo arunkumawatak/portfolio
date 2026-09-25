@@ -19,11 +19,11 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center gap-3 mb-8"
+            className="flex items-center gap-5 mb-2"
           >
             <div className="h-px w-12 bg-primary" />
             <span className="text-primary font-body text-sm tracking-widest uppercase">
-              Flutter Product Engineer            </span>
+              Flutter Product Engineer</span>
           </motion.div>
 
           <motion.h1
