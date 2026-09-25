@@ -143,9 +143,8 @@ const ProjectDetailPage = () => {
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.45 + i * 0.1 }}
-                    className={`flex flex-col gap-8 ${
-                      i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                    }`}
+                    className={`flex flex-col gap-8 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                      }`}
                   >
                     <div className="md:w-2/3 relative rounded-xl overflow-hidden group">
                       <img
@@ -157,7 +156,6 @@ const ProjectDetailPage = () => {
                       <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
                     </div>
                     <div className="md:w-1/3 flex items-center">
-                      {/* TODO: Add captions/descriptions for gallery images */}
                     </div>
                   </motion.div>
                 ))}
