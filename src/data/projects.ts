@@ -1,5 +1,6 @@
 import indhanpayImg from "@/assets/project-indhanpay.png";
 import nwayImg from "@/assets/project-nway.png";
+
 import consultkiyaImg from "@/assets/Free_App.png";
 import gamersGiftImg from "@/assets/gamersGIft.png";
 import dawaBajarImg from "@/assets/project-dawabajar.jpg";
